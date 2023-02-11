@@ -1,0 +1,17 @@
+[Unit]
+Description=Express
+
+[Service]
+ExecStart=/usr/bin/node bin/www
+WorkingDirectory=/home/ec2-user/nodejs-express-example
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=Express
+User=ec2-user
+Group=ec2-user
+Environment=
+
+[Install]
+WantedBy=multi-user.target
