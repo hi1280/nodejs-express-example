@@ -10,7 +10,6 @@ router.get('/', async function(req, res, next) {
     database : process.env.DB_DATABASE
   });
   const [countries] = await connection.execute('SELECT * from country');
-  console.log('The solution is: ', countries[0]);
   res.render('index', { title: 'Express', countries });
 });
 
