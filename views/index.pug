@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 国一覧
+  table
+    thead
+      tr
+        th 国コード
+        th 国名
+        th 大陸
+        th 地域
+        th 面積
+        th 人口
+    tbody
+      for country in countries
+        tr
+          td= country.Code
+          td= country.Name
+          td= country.Continent
+          td= country.Region
+          td= country.SurfaceArea
+          td= country.Population
